@@ -11,6 +11,9 @@ public class Examen1_AngelT {
         
         Scanner sc = new Scanner(System.in);
         ArrayList<Sistema> filesys = new ArrayList();
+        ArrayList<Archivo> carpeta = new ArrayList();
+        ArrayList<Texto> text = new ArrayList();
+        ArrayList<Ejecutable> exec = new ArrayList();
         
         try{
             
@@ -24,20 +27,26 @@ public class Examen1_AngelT {
             int tamano=sc.nextInt();
             
             filesys.add(new Sistema(sistema, user, tamano, new Carpeta()));
-            
+            System.out.print(filesys);
             String opcion = "";
             do{
-                System.out.print(filesys);
+                System.out.print(carpeta);
                 opcion=sc.next();
                 switch(opcion){
                     case "mkdir":
-                        System.out.println("Escriba el nombre de la carpeta: ");
                         String nfolder= sc.next();
                         
+                        carpeta.add(new Carpeta(nfolder, tamano, new Date(), new Date(), sistema, nfolder, tamano, new Carpeta()));
                         
+                        System.out.println(carpeta);
+                        System.out.println();
                         break;
                         
                     case "cat":
+                        String ntxt=sc.next();
+                        text.add(new Texto(ntxt, opcion, tamano, new Date(), new Date(), sistema, ntxt, tamano, new Carpeta()));
+                        System.out.println(text);
+                        
                         break;
                         
                     case "mod":
@@ -48,14 +57,29 @@ public class Examen1_AngelT {
                         
                     case "ls":
                         System.out.println("-----");
-                        for (Sistema filesy : filesys) {
-                            if ( filesy instanceof Archivo){
-                            System.out.println("sdf"+filesys);
+                        for (Archivo c : carpeta) {
+                            if ( c instanceof Archivo){
+                            System.out.println("Directorio "+carpeta);
+                        }
+                        }
+                        System.out.println("-----");
+                        for (Archivo t : text) {
+                            if ( t instanceof Archivo){
+                            System.out.println("Archivos de texto "+text);
+                        }
+                        }
+                        System.out.println("-----");
+                        for (Archivo e : exec) {
+                            if ( e instanceof Archivo){
+                            System.out.println("Archivos "+exec);
                         }
                         }
                         break;
                         
                     case "del":
+                        System.out.println("Crear archivo de texto: ");
+                        int pos=sc.nextInt();
+                        text.remove(pos);
                         break;
                         
                     case "exec":
