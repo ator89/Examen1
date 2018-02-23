@@ -5,9 +5,9 @@ package examen1_angelt;
 import java.util.Date;
 
 
-public abstract class Archivo extends Sistema implements Comandos{
+public class Archivo extends Sistema {
     
-    protected String nom_archivo;
+    protected String nom_archivo="root";
     protected int size;
     protected Date creacion, modif;
 
@@ -15,22 +15,20 @@ public abstract class Archivo extends Sistema implements Comandos{
         super();
     }
 
-    public Archivo(String nombre, int size, Date creacion, Date modif) {
-        this.nom_archivo = nombre;
+    public Archivo(String nom_archivo, int size, Date creacion, Date modif, String sistema, String nombre, int capacidad, Carpeta root) {
+        super(sistema, nombre, capacidad, root);
+        this.nom_archivo = nom_archivo;
         this.size = size;
         this.creacion = creacion;
         this.modif = modif;
     }
 
-    public String getNombre() {
+    public String getNom_archivo() {
         return nom_archivo;
     }
 
-    public void setNombre(String nombre) {
-        
-        if (nom_archivo==null){
-            this.nom_archivo = "root";
-        }
+    public void setNom_archivo(String nom_archivo) {
+        this.nom_archivo = nom_archivo;
     }
 
     public int getSize() {
@@ -59,11 +57,8 @@ public abstract class Archivo extends Sistema implements Comandos{
 
     @Override
     public String toString() {
-        return "Fichero{" + "nombre=" + nom_archivo 
-                + ", size=" + size + ", creacion=" 
-                + creacion + ", modif=" + modif + '}';
+        return "Archivo{" + "nom_archivo=" + nom_archivo + ", size=" + size + ", creacion=" + creacion + ", modif=" + modif + '}';
     }
-    
-    
+
 
 }

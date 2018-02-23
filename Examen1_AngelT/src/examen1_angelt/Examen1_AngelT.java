@@ -34,7 +34,7 @@ public class Examen1_AngelT {
                         System.out.println("Escriba el nombre de la carpeta: ");
                         String nfolder= sc.next();
                         
-                        filesys.add(new Carpeta(nfolder, tamano, new Date(), new Date()));
+                        
                         break;
                         
                     case "cat":
@@ -47,6 +47,12 @@ public class Examen1_AngelT {
                         break;
                         
                     case "ls":
+                        System.out.println("-----");
+                        for (Sistema filesy : filesys) {
+                            if ( filesy instanceof Archivo){
+                            System.out.println("sdf"+filesys);
+                        }
+                        }
                         break;
                         
                     case "del":
@@ -58,6 +64,7 @@ public class Examen1_AngelT {
                     default:
                         System.err.println("No existe el comando "
                                 +opcion+". Intente nuevamente\n");
+                        break;
                             
                 }
                 

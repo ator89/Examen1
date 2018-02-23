@@ -53,7 +53,7 @@ public class Sistema {
 
     @Override
     public String toString() {
-        return "\\" + nombre + "\\" + root;
+        return "\\" + nombre + "\\"+root;
     }
     
     
