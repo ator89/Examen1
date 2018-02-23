@@ -19,7 +19,12 @@ public class Examen1_AngelT {
             System.out.println("Escriba el nombre del usuario: ");
             String user = sc.next();
             
-            filesys.add(new Sistema(sistema, user));
+            System.out.println("Ingrese el tamaño de la carpeta: ");
+            int tamano=sc.nextInt();
+            
+            filesys.add(new Sistema(sistema, user, tamano, new Carpeta()));
+            
+            System.out.println(filesys);
             
             
         } catch(Exception e){
