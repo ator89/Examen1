@@ -53,7 +53,7 @@ public class Sistema {
 
     @Override
     public String toString() {
-        return "Sistema{" + "sistema=" + sistema + ", nombre=" + nombre + ", capacidad=" + capacidad + ", root=" + root + '}';
+        return "\\" + nombre + "\\" + root;
     }
     
     

@@ -28,7 +28,51 @@ public class Carpeta extends Archivo{
 
     @Override
     public String toString() {
-        return "Carpeta{" + "archivo=" + archivo + '}';
+        return super.nombre;
+    }
+
+    @Override
+    public void crearCarpeta() {
+    
+    }
+
+    @Override
+    public void crearArchivoTexto() {
+        
+    }
+
+    @Override
+    public void crearArchivoExe() {
+        
+    }
+
+    @Override
+    public void modificarArchio() {
+    
+    }
+
+    @Override
+    public void cambiarDirectorio() {
+        
+    }
+
+    @Override
+    public void regresarDirectorio() {
+    
+    }
+
+    @Override
+    public void listar() {
+    
+    }
+
+    @Override
+    public void borrar() {
+    
+    }
+
+    @Override
+    public void execute() {
     }
 
 }
