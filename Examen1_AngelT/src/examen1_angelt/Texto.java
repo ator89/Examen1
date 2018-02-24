@@ -28,7 +28,7 @@ public class Texto extends Archivo{
 
     @Override
     public String toString() {
-        return texto + ".txt";
+        return texto + "";
     }
     
     

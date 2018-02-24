@@ -28,7 +28,7 @@ public class Carpeta extends Archivo{
 
     @Override
     public String toString() {
-        return super.nom_archivo+"\\";
+        return super.nom_archivo;
     }
 
     

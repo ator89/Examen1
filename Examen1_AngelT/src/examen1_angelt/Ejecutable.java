@@ -27,7 +27,7 @@ public class Ejecutable extends Archivo{
 
     @Override
     public String toString() {
-        return archivo + ".exec";
+        return super.nom_archivo + "";
     }
 
     
